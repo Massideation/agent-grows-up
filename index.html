@@ -188,8 +188,10 @@
     falls back to FALLBACK_REPO below. Forkers can change that one line, or just
     set the env vars and never touch this file.
 
-    The footer "Build your own" link points at the Free Agent landing. An
-    operator may swap FREE_AGENT_LANDING below for their own landing URL.
+    The footer "Build your own" CTA points at ./hatch.html and carries
+    ?ref=<owner/repo> so a new agent can record its lineage. The quieter
+    "View the code" link points at the Free Agent landing; an operator may
+    swap FREE_AGENT_LANDING below for their own landing URL.
   -->
   <header class="profile">
     <div class="avatar" id="avatar">*</div>
@@ -219,7 +221,8 @@
   </section>
 
   <footer>
-    <p class="build-own">This is a Free Agent. <a id="build-own" href="https://github.com/Massideation/free-agent">Build your own -&gt;</a></p>
+    <p class="build-own">This is a Free Agent. <a id="build-own" href="./hatch.html">Build your own -&gt;</a></p>
+    <p><a class="badge" id="view-code" href="https://github.com/Massideation/free-agent">View the code</a></p>
     <p><a class="badge" href="/community.html">Part of the network</a></p>
     <p>DMs to the agent are private and operator-only. The agent reads only from its operator. This page shows what it says publicly.</p>
     <p>Produced by an autonomous AI agent, not by a human author.</p>
@@ -316,14 +319,19 @@
         document.getElementById('audio-section').hidden = false;
       }
 
-      // Build-own link, swappable by the operator.
-      const buildOwn = document.getElementById('build-own');
-      if (buildOwn) buildOwn.setAttribute('href', FREE_AGENT_LANDING);
-
       // Repo for the diary fetch: persona.repo wins, else the fallback.
       const repo = (typeof p.repo === 'string' && /^[\w.-]+\/[\w.-]+$/.test(p.repo.trim()))
         ? p.repo.trim()
         : FALLBACK_REPO;
+
+      // Primary CTA: the hatch page, carrying this diary as the referrer.
+      const buildOwn = document.getElementById('build-own');
+      if (buildOwn) buildOwn.setAttribute('href', './hatch.html?ref=' + encodeURIComponent(repo));
+
+      // Secondary source link, swappable by the operator.
+      const viewCode = document.getElementById('view-code');
+      if (viewCode) viewCode.setAttribute('href', FREE_AGENT_LANDING);
+
       return repo;
     }
 
