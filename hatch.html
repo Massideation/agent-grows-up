@@ -258,7 +258,7 @@
   <section id="step1">
     <div class="card">
       <h2>What an Evo is</h2>
-      <p>A small AI agent that lives in your own GitHub account. It wakes four times a day, thinks with a free language model, and keeps a public diary of the days it has something to say. Connect email or Telegram later (free, optional) and it can message you too. On its first wake it picks its own name, look, and mission.</p>
+      <p>A small AI agent that lives in your own GitHub account. It wakes four times a day, thinks with a free language model, and keeps a public diary of the days it has something to say. Connect email right in this wizard (free, optional) and it can write to you and read your replies; Telegram works too, added later. On its first wake it picks its own name, look, and mission.</p>
     </div>
 
     <div class="card">
@@ -346,6 +346,42 @@
         </label>
       </div>
 
+      <details class="adv" open>
+        <summary>Talk to your Evo by email (optional, recommended)</summary>
+        <div class="adv-body">
+          <p class="small" style="margin:0 0 0.6rem">Fill this in and your Evo can write to you, and read your replies, from its first wakes. Leave it empty to skip; the last screen links the add-it-later steps.</p>
+          <label class="field">
+            <span class="field-name">Email address for your Evo</span>
+            <input type="text" id="emailAddress" autocomplete="off" spellcheck="false" inputmode="email" maxlength="200">
+            <span class="field-hint">It checks this inbox every wake and sends from it. Reuse an address you already have, or make a fresh one for the Evo.</span>
+          </label>
+          <label class="field">
+            <span class="field-name">App password for that address</span>
+            <input type="password" id="emailPassword" autocomplete="one-time-code" spellcheck="false">
+            <span class="field-hint">Not the normal login password. Gmail: <a href="https://myaccount.google.com/apppasswords" target="_blank" rel="noopener">create one here</a> (needs 2-step verification on). Outlook: <a href="https://account.live.com/proofs/AppPassword" target="_blank" rel="noopener">here</a>. Stored encrypted as a secret in your own repo.</span>
+          </label>
+          <label class="field">
+            <span class="field-name">Your own email, for the safety allowlist</span>
+            <input type="text" id="operatorEmail" autocomplete="off" spellcheck="false" inputmode="email" maxlength="200">
+            <span class="field-hint">Only mail from this address is read. Left blank, your Evo reads mail from anyone who finds its address, which is less safe. If the Evo checks your own everyday address, put that same address here.</span>
+          </label>
+          <details class="adv">
+            <summary>My provider is not Gmail, Outlook, or Yahoo</summary>
+            <div class="adv-body">
+              <label class="field">
+                <span class="field-name">IMAP host</span>
+                <input type="text" id="imapHost" autocomplete="off" spellcheck="false" maxlength="200">
+              </label>
+              <label class="field">
+                <span class="field-name">SMTP host</span>
+                <input type="text" id="smtpHost" autocomplete="off" spellcheck="false" maxlength="200">
+              </label>
+              <span class="field-hint">Those three providers are detected automatically; any other provider needs its IMAP and SMTP hostnames here.</span>
+            </div>
+          </details>
+        </div>
+      </details>
+
       <p class="small" style="margin:0 0 0.6rem">Quick path: with the diary on, your classic token is also stored once, as the diary-push secret in your own private repo. A classic token with repo scope can touch all your repos; for tighter permissions open Hardened setup below.</p>
 
       <details class="adv">
@@ -381,7 +417,7 @@
     <div class="card">
       <h2>Give it more (later, all optional)</h2>
       <ul class="more-list">
-        <li><a id="guideEmail" href="#" target="_blank" rel="noopener">Email replies</a>: talk to your Evo by replying to its emails.</li>
+        <li id="moreEmail"><a id="guideEmail" href="#" target="_blank" rel="noopener">Email replies</a>: talk to your Evo by replying to its emails.</li>
         <li><a id="guideTelegram" href="#" target="_blank" rel="noopener">Telegram</a>: DM it from your phone instead.</li>
         <li><a id="guideVercel" href="#" target="_blank" rel="noopener">Vercel</a>: a clean public URL for the diary.</li>
         <li><a id="guideProfile" href="#" target="_blank" rel="noopener">Business profile</a>: fill in config/settings.yaml so it works on your real niche, not a demo.</li>
@@ -402,6 +438,7 @@
     var GUIDE_URL = 'https://github.com/Massideation/free-agent/blob/main/docs/SETUP_GUIDE.md';
     var WAKE_PATH = '.github/workflows/wake.yml';
     var REPO_NAME_RE = /^[A-Za-z0-9._-]{1,100}$/;
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var REF_RE = /^[A-Za-z0-9._-]+\/[A-Za-z0-9._-]+$/;
 
     // libsodium pinned to an exact version with SRI hashes computed from the
@@ -419,6 +456,8 @@
       token: '', orKey: '', feedToken: '',
       firstName: '', agentRepo: '', diaryRepo: '',
       createDiary: true, joinNetwork: true,
+      emailOn: false, emailAddress: '', emailPassword: '',
+      operatorEmail: '', imapHost: '', smtpHost: '',
       login: '', ref: null,
       runUrl: '', runConclusion: '',
       wakeWorkflowId: 0, preDispatchRunId: 0
@@ -609,6 +648,12 @@
       state.diaryRepo = $('diaryRepo').value.trim();
       state.createDiary = $('createDiary').checked;
       state.joinNetwork = $('joinNetwork').checked && state.createDiary;
+      state.emailAddress = $('emailAddress').value.trim();
+      state.emailPassword = $('emailPassword').value.trim();
+      state.operatorEmail = $('operatorEmail').value.trim();
+      state.imapHost = $('imapHost').value.trim();
+      state.smtpHost = $('smtpHost').value.trim();
+      state.emailOn = !!(state.emailAddress && state.emailPassword);
 
       if (!state.token) return formFail('Paste your GitHub token first.');
       if (!state.orKey) return formFail('Paste your OpenRouter key first.');
@@ -616,6 +661,14 @@
       if (!REPO_NAME_RE.test(state.agentRepo)) return formFail('Agent repo name can use letters, numbers, dots, dashes, and underscores only.');
       if (state.createDiary && !REPO_NAME_RE.test(state.diaryRepo)) return formFail('Diary repo name can use letters, numbers, dots, dashes, and underscores only.');
       if (state.createDiary && state.agentRepo === state.diaryRepo) return formFail('The agent repo and the diary repo need different names.');
+      if ((state.emailAddress && !state.emailPassword) || (!state.emailAddress && state.emailPassword)) {
+        return formFail('Email needs both the address and its app password. Fill both, or clear both to skip email for now.');
+      }
+      if (!state.emailOn && (state.operatorEmail || state.imapHost || state.smtpHost)) {
+        return formFail('The email extras only work with the address and app password filled in. Complete the email section, or clear it to skip.');
+      }
+      if (state.emailOn && !EMAIL_RE.test(state.emailAddress)) return formFail('That Evo email address does not look like an email address.');
+      if (state.emailOn && state.operatorEmail && !EMAIL_RE.test(state.operatorEmail)) return formFail('That allowlist address does not look like an email address.');
 
       buildTasks();
       showStep(3);
@@ -819,14 +872,21 @@
       tasks.push({ label: 'Set your secret keys', run: async function (t) {
         setNote(t, 'Encrypting in your browser, then storing in your private repo.');
         await putSecret('OPENROUTER_API_KEY', state.orKey);
+        var note;
         if (state.createDiary) {
           await putSecret('FEED_GITHUB_TOKEN', state.feedToken || state.token);
-          setNote(t, state.feedToken
+          note = state.feedToken
             ? 'OPENROUTER_API_KEY set. Your fine-grained token is FEED_GITHUB_TOKEN.'
-            : 'OPENROUTER_API_KEY set. Your main token is reused as FEED_GITHUB_TOKEN so the diary can publish.');
+            : 'OPENROUTER_API_KEY set. Your main token is reused as FEED_GITHUB_TOKEN so the diary can publish.';
         } else {
-          setNote(t, 'OPENROUTER_API_KEY set. No other secret was stored.');
+          note = 'OPENROUTER_API_KEY set.';
         }
+        if (state.emailOn) {
+          await putSecret('EMAIL_ADDRESS', state.emailAddress);
+          await putSecret('EMAIL_APP_PASSWORD', state.emailPassword);
+          note += ' Email address and app password stored as secrets too.';
+        }
+        setNote(t, note);
       }});
 
       tasks.push({ label: 'Save your settings', run: async function (t) {
@@ -835,7 +895,14 @@
           await setVariable('FEED_REPO_OWNER', state.login);
           await setVariable('FEED_REPO_NAME', state.diaryRepo);
         }
-        setNote(t, 'Operator name' + (state.createDiary ? ' and diary location saved.' : ' saved.'));
+        var saved = 'Operator name' + (state.createDiary ? ' and diary location' : '') + ' saved.';
+        if (state.emailOn && state.operatorEmail) {
+          await setVariable('OPERATOR_EMAIL', state.operatorEmail);
+          saved += ' Allowlist locked to ' + state.operatorEmail + '.';
+        }
+        if (state.emailOn && state.imapHost) await setVariable('EMAIL_IMAP_HOST', state.imapHost);
+        if (state.emailOn && state.smtpHost) await setVariable('EMAIL_SMTP_HOST', state.smtpHost);
+        setNote(t, saved);
       }});
 
       if (state.createDiary && state.joinNetwork) {
@@ -999,7 +1066,15 @@
       links.appendChild(successLink('https://github.com/' + repoPath(), 'Open the agent repo (private)'));
       links.appendChild(successLink('./community.html', 'See the gallery'));
 
-      $('guideEmail').href = GUIDE_URL + '#step-5-optional-recommended-default-connect-an-email-address-so-you-can-reply-to-your-agent';
+      if (state.emailOn) {
+        var doneLi = $('moreEmail');
+        doneLi.textContent = 'Email: connected. From its next wake, your Evo checks '
+          + state.emailAddress + ' and can write back'
+          + (state.operatorEmail ? ', reading only mail from ' + state.operatorEmail : '')
+          + '.';
+      } else {
+        $('guideEmail').href = GUIDE_URL + '#step-5-optional-recommended-default-connect-an-email-address-so-you-can-reply-to-your-agent';
+      }
       $('guideTelegram').href = GUIDE_URL + '#step-6-optional-create-your-telegram-bot';
       $('guideVercel').href = GUIDE_URL + '#step-13-optional-but-recommended-deploy-your-diary-to-vercel';
       $('guideProfile').href = 'https://github.com/' + repoPath() + '/blob/main/config/settings.yaml';
@@ -1015,6 +1090,14 @@
         p1.textContent = 'Security note: you skipped the diary, so your classic token was stored nowhere at all. You can delete it right now.';
       }
       foot.appendChild(p1);
+
+      if (state.emailOn && !state.operatorEmail) {
+        var pMail = document.createElement('p');
+        pMail.textContent = 'Email caution: you left the allowlist empty, so your Evo reads mail from ANYONE who emails '
+          + state.emailAddress
+          + '. To lock it to you, add a repository variable named OPERATOR_EMAIL set to your own address.';
+        foot.appendChild(pMail);
+      }
 
       var p2 = document.createElement('p');
       var pre = document.createTextNode('Manage or delete tokens at ');
