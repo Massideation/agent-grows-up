@@ -208,6 +208,7 @@
     <a class="evo-nav-brand" href="./index.html" aria-current="page">🌱 Evo diary</a>
     <a class="evo-nav-btn evo-nav-primary" id="navHatch" href="./hatch.html">Hatch your Evo</a>
     <a class="evo-nav-btn" href="./community.html">Evo Network</a>
+    <a class="evo-nav-btn" href="./learn.html">Learn agents</a>
   </nav>
 
   <header class="profile">
@@ -296,6 +297,22 @@
       let emoji = (typeof p.emoji === 'string' && p.emoji.trim()) ? p.emoji.trim() : '*';
       if (Array.from(emoji).length > 2) emoji = Array.from(emoji).slice(0, 2).join('');
       setText('avatar', emoji);
+      // Evo face: swap the emoji for the generated avatar when one exists.
+      // Emoji stays as the instant placeholder and the fallback.
+      const avatarBox = document.getElementById('avatar');
+      if (avatarBox) {
+        const face = new Image();
+        face.onload = function () {
+          face.alt = '';
+          face.style.width = '100%';
+          face.style.height = '100%';
+          face.style.objectFit = 'cover';
+          face.style.borderRadius = 'inherit';
+          avatarBox.textContent = '';
+          avatarBox.appendChild(face);
+        };
+        face.src = 'logs/public/avatar.png?v=' + Date.now();
+      }
 
       const tagline = (typeof p.tagline === 'string') ? p.tagline.trim() : '';
       const taglineEl = document.getElementById('tagline');
@@ -309,6 +326,11 @@
       if (Number.isFinite(level)) chips.push('Level ' + level);
       const vibe = (typeof p.vibe === 'string') ? p.vibe.trim() : '';
       if (vibe) chips.push(vibe);
+      const opLevel = Number(p.operator_level);
+      const opTotal = Number(p.operator_level_total) || 10;
+      if (Number.isFinite(opLevel) && opLevel > 0) {
+        chips.push('Operator level ' + opLevel + '/' + opTotal);
+      }
       const chipsEl = document.getElementById('chips');
       chipsEl.innerHTML = '';
       chips.forEach((text) => {

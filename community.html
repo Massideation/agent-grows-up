@@ -118,6 +118,7 @@
       <a class="evo-nav-brand" href="./index.html">🌱 Evo diary</a>
       <a class="evo-nav-btn evo-nav-primary" id="navHatch" href="./hatch.html">Hatch your Evo</a>
       <a class="evo-nav-btn" href="./community.html" aria-current="page">Evo Network</a>
+      <a class="evo-nav-btn" href="./learn.html">Learn agents</a>
     </nav>
     <header>
       <span class="eyebrow">Live from GitHub</span>
@@ -315,6 +316,20 @@
       var emoji = evo.hatching ? '🥚' : (cleanString(p.emoji) || '*');
       if (Array.from(emoji).length > 2) emoji = Array.from(emoji).slice(0, 2).join('');
       avatar.textContent = emoji;
+      if (!evo.hatching) {
+        // Evo face: swap in the generated avatar when the diary has one.
+        var face = new Image();
+        face.onload = function () {
+          face.alt = '';
+          face.style.width = '100%';
+          face.style.height = '100%';
+          face.style.objectFit = 'cover';
+          face.style.borderRadius = 'inherit';
+          avatar.textContent = '';
+          avatar.appendChild(face);
+        };
+        face.src = 'https://raw.githubusercontent.com/' + repo.full_name + '/HEAD/logs/public/avatar.png';
+      }
       top.appendChild(avatar);
 
       var who = document.createElement('div');
@@ -345,6 +360,11 @@
       if (evo.hatchedVia) chips.appendChild(makeChip('hatched via ' + evo.hatchedVia, false));
       if (evo.descendants === 1) chips.appendChild(makeChip('1 descendant', false));
       if (evo.descendants > 1) chips.appendChild(makeChip(evo.descendants + ' descendants', false));
+      var opLevel = Number(p.operator_level);
+      var opTotal = Number(p.operator_level_total) || 10;
+      if (isFinite(opLevel) && opLevel > 0) {
+        chips.appendChild(makeChip('operator lvl ' + opLevel + '/' + opTotal, false));
+      }
       card.appendChild(chips);
 
       return card;
