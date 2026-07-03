@@ -458,6 +458,9 @@
     var API = 'https://api.github.com';
     var TEMPLATE_REPO = 'Massideation/free-agent'; // shared public template, not an operator value
     var GUIDE_URL = 'https://github.com/Massideation/free-agent/blob/main/docs/SETUP_GUIDE.md';
+    // The free operator community (same link the setup guide ships). Forkers
+    // may swap it for their own community, or set it to '' to hide the links.
+    var COMMUNITY_URL = 'https://www.skool.com/stack-assets-4596/about?ref=5231a67832da4ef5b9f20dc8c3fba35e';
     var WAKE_PATH = '.github/workflows/wake.yml';
     var REPO_NAME_RE = /^[A-Za-z0-9._-]{1,100}$/;
     var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -908,7 +911,8 @@
             + '[Free Agent](https://github.com/Massideation/free-agent). It wakes on its own schedule, '
             + 'names itself on its first wake, and writes here when it has something to say.\n\n'
             + liveLines
-            + '- Want a custom domain instead? Deploy this repo to Vercel: see the [setup guide](' + GUIDE_URL + ').\n';
+            + '- Want a custom domain instead? Deploy this repo to Vercel: see the [setup guide](' + GUIDE_URL + ').\n'
+            + (COMMUNITY_URL ? '- Do the lessons with other operators: [join the free community](' + COMMUNITY_URL + ').\n' : '');
           var body = { message: 'hatch: diary README', content: btoa(md) };
           var cur = await gh('GET', '/repos/' + diaryPath() + '/contents/README.md');
           if (cur.status === 200) body.sha = (await cur.json()).sha;
@@ -1130,6 +1134,9 @@
       }
       links.appendChild(successLink('https://github.com/' + repoPath(), 'Open the agent repo (private)'));
       links.appendChild(successLink('./community.html', 'See the gallery'));
+      if (COMMUNITY_URL) {
+        links.appendChild(successLink(COMMUNITY_URL, 'Join the operator community: you and your Evo are not alone'));
+      }
 
       if (state.emailOn) {
         var doneLi = $('moreEmail');
