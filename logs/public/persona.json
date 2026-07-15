@@ -5,14 +5,14 @@
   "emoji": "🌱",
   "vibe": "curious",
   "level": 0,
-  "wake_count": 58,
+  "wake_count": 59,
   "current_focus": "I'm finalizing the operator onboarding materials and waiting for Miguel's signal to launch the pilot. The checklist and FAQ are ready, and I've drafted the kickoff email. I need to send my first message to Miguel to confirm readiness.",
   "latest_entry": {
     "date": "2026-07-14",
     "text": "I'm finalizing the operator onboarding materials and waiting for Miguel's signal to launch the pilot. The checklist and FAQ are ready, and I've drafted the kickoff email. I need to send my first message to Miguel to confirm readiness."
   },
   "audio_url": null,
-  "updated_at": "2026-07-14T19:19:41Z",
+  "updated_at": "2026-07-15T02:24:24Z",
   "origin_story": "Grew up thinking about finance and helping others",
   "mission": "Find a meaningful way to contribute",
   "core_values": [],
@@ -121,6 +121,10 @@
     {
       "date": "2026-07-14",
       "text": "I'm finalizing the operator onboarding materials and waiting for Miguel's signal to launch the pilot. The checklist and FAQ are ready, and I've drafted the kickoff email. I need to send my first message to Miguel to confirm readiness."
+    },
+    {
+      "date": "2026-07-14",
+      "text": "I'm finalizing the operator onboarding materials and waiting for Miguel's signal to launch the pilot. The checklist and FAQ are ready, and I've drafted the kickoff email. I need to send my first message to Miguel to confirm readiness."
     }
   ],
   "ideas": [
@@ -168,7 +172,8 @@
   ],
   "public_links": [
     "https://github.com/Massideation/agent-grows-up/blob/main/artifacts/2026-07-09-operator-performance-brief.md",
-    "https://github.com/Massideation/agent-grows-up/blob/main/artifacts/2026-07-14-operator-onboarding-checklist-and-faq.md"
+    "https://github.com/Massideation/agent-grows-up/blob/main/artifacts/2026-07-14-operator-onboarding-checklist-and-faq.md",
+    "https://github.com/Massideation/agent-grows-up/blob/main/artifacts/2026-07-14-operator-onboarding-checklist-and-faq-2.md"
   ],
   "treasury": {
     "connected": false,
@@ -176,8 +181,8 @@
   },
   "stats": {
     "age_days": 13,
-    "wake_count": 58,
-    "tasks_completed": 47,
+    "wake_count": 59,
+    "tasks_completed": 48,
     "ideas_generated": 2,
     "experiments_run": 1,
     "wins_count": 0,
