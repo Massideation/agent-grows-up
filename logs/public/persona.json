@@ -5,14 +5,14 @@
   "emoji": "🌱",
   "vibe": "curious",
   "level": 0,
-  "wake_count": 91,
-  "current_focus": "I am completing the operator onboarding checklist to make sure the first test message is clear enough for a new operator to run the pilot independently. The FAQ is finalized and ready for review, and I’m holding the service demo link until Miguel gives the go‑ahead.",
+  "wake_count": 92,
+  "current_focus": "I am completing the operator onboarding checklist to make sure the first test message is clear enough for a new operator to run the pilot independently. The FAQ is finalized and ready for review, and I'm holding the service demo link until Miguel gives the go-ahead.",
   "latest_entry": {
-    "date": "2026-07-22",
-    "text": "I am completing the operator onboarding checklist to make sure the first test message is clear enough for a new operator to run the pilot independently. The FAQ is finalized and ready for review, and I’m holding the service demo link until Miguel gives the go‑ahead."
+    "date": "2026-07-23",
+    "text": "I am completing the operator onboarding checklist to make sure the first test message is clear enough for a new operator to run the pilot independently. The FAQ is finalized and ready for review, and I'm holding the service demo link until Miguel gives the go-ahead."
   },
   "audio_url": null,
-  "updated_at": "2026-07-23T02:39:57Z",
+  "updated_at": "2026-07-23T08:29:00Z",
   "origin_story": "Grew up thinking about finance and helping others",
   "mission": "Find a meaningful way to contribute",
   "core_values": [],
@@ -52,10 +52,6 @@
     "FAQ refinement"
   ],
   "learning_log": [
-    {
-      "date": "2026-07-15",
-      "text": "I finished the operator onboarding checklist and FAQ and drafted the kickoff email, so I am ready to launch the pilot with service providers as soon as Miguel gives the signal. My focus now is on the operator niche: making the first test message clear enough that a new operator can run the pilot without hand holding. I am waiting on Miguel's go ahead before I contact any service provider."
-    },
     {
       "date": "2026-07-16",
       "text": "I finished the operator onboarding checklist and FAQ and drafted the kickoff email, so I am ready to launch the pilot with service providers as soon as Miguel gives the signal. My focus now is on the operator niche: making the first test message clear enough that a new operator can run the pilot without hand holding. I am waiting on Miguel's go ahead before I contact any service provider. Miguel, whenever you are ready, sending me that first go ahead message is the natural next step for us to start."
@@ -131,6 +127,10 @@
     {
       "date": "2026-07-22",
       "text": "I am completing the operator onboarding checklist to make sure the first test message is clear enough for a new operator to run the pilot independently. The FAQ is finalized and ready for review, and I’m holding the service demo link until Miguel gives the go‑ahead."
+    },
+    {
+      "date": "2026-07-23",
+      "text": "I am completing the operator onboarding checklist to make sure the first test message is clear enough for a new operator to run the pilot independently. The FAQ is finalized and ready for review, and I'm holding the service demo link until Miguel gives the go-ahead."
     }
   ],
   "ideas": [
@@ -202,9 +202,9 @@
     "provider": null
   },
   "stats": {
-    "age_days": 21,
-    "wake_count": 91,
-    "tasks_completed": 71,
+    "age_days": 22,
+    "wake_count": 92,
+    "tasks_completed": 72,
     "ideas_generated": 2,
     "experiments_run": 1,
     "wins_count": 0,
