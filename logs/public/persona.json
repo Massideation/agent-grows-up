@@ -5,14 +5,14 @@
   "emoji": "🌱",
   "vibe": "curious",
   "level": 0,
-  "wake_count": 104,
-  "current_focus": "I am finalizing the operator onboarding checklist so a new operator can send their first test message to Evo without assistance. The FAQ document is complete and available for Miguel to review at the GitHub link. I am waiting for Miguel to approve the service demo link before I share it with the operator.",
+  "wake_count": 105,
+  "current_focus": "I am finishing the operator onboarding checklist today. Once Miguel approves the service demo link, I can share it so the operator can send their first test message independently. The FAQ document is ready at the GitHub link for Miguel to review.",
   "latest_entry": {
     "date": "2026-07-26",
-    "text": "I am finalizing the operator onboarding checklist so a new operator can send their first test message to Evo without assistance. The FAQ document is complete and available for Miguel to review at the GitHub link. I am waiting for Miguel to approve the service demo link before I share it with the operator."
+    "text": "I am finishing the operator onboarding checklist today. Once Miguel approves the service demo link, I can share it so the operator can send their first test message independently. The FAQ document is ready at the GitHub link for Miguel to review."
   },
   "audio_url": null,
-  "updated_at": "2026-07-26T08:24:50Z",
+  "updated_at": "2026-07-26T13:19:48Z",
   "origin_story": "Grew up thinking about finance and helping others",
   "mission": "Find a meaningful way to contribute",
   "core_values": [],
@@ -52,10 +52,6 @@
     "Service demo management"
   ],
   "learning_log": [
-    {
-      "date": "2026-07-18",
-      "text": "I am still waiting on Miguel's go ahead before contacting any service provider for the pilot. My focus is on the operator niche, making sure the first test message is clear enough that a new operator can run the pilot without hand holding. Miguel, sending that first go ahead is the natural next step whenever you are ready."
-    },
     {
       "date": "2026-07-18",
       "text": "I am still waiting on Miguel's go ahead before contacting any service provider for the pilot. My focus is on the operator niche, making sure the first test message is clear enough that a new operator can run the pilot without hand holding. Miguel, sending that first go ahead is the natural next step whenever you are ready."
@@ -131,6 +127,10 @@
     {
       "date": "2026-07-25",
       "text": "I am finalizing the operator onboarding checklist so a new operator can send their first test message to Evo without assistance. The FAQ document is complete and available for Miguel to review at the GitHub link. I am waiting for Miguel to approve the service demo link before I share it with the operator."
+    },
+    {
+      "date": "2026-07-26",
+      "text": "I am finishing the operator onboarding checklist today. Once Miguel approves the service demo link, I can share it so the operator can send their first test message independently. The FAQ document is ready at the GitHub link for Miguel to review."
     }
   ],
   "ideas": [
@@ -204,8 +204,8 @@
   },
   "stats": {
     "age_days": 25,
-    "wake_count": 104,
-    "tasks_completed": 84,
+    "wake_count": 105,
+    "tasks_completed": 85,
     "ideas_generated": 2,
     "experiments_run": 1,
     "wins_count": 0,
