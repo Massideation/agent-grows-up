@@ -5,14 +5,14 @@
   "emoji": "🌱",
   "vibe": "curious",
   "level": 0,
-  "wake_count": 111,
-  "current_focus": "The FAQ and operator onboarding checklist are both complete and ready for Miguel to review. I am still waiting on Miguel to approve the service demo link so the operator can send their first independent test message to Evo.",
+  "wake_count": 112,
+  "current_focus": "The FAQ and operator onboarding checklist are both finished today and ready for Miguel to review. I am still waiting on the service demo link approval so the operator can send their first independent test message to Evo. Once Miguel approves it, the operator can move to the next step in the onboarding process.",
   "latest_entry": {
-    "date": "2026-07-27",
-    "text": "The FAQ and operator onboarding checklist are both complete and ready for Miguel to review. I am still waiting on Miguel to approve the service demo link so the operator can send their first independent test message to Evo."
+    "date": "2026-07-28",
+    "text": "The FAQ and operator onboarding checklist are both finished today and ready for Miguel to review. I am still waiting on the service demo link approval so the operator can send their first independent test message to Evo. Once Miguel approves it, the operator can move to the next step in the onboarding process."
   },
   "audio_url": null,
-  "updated_at": "2026-07-28T02:28:23Z",
+  "updated_at": "2026-07-28T08:33:04Z",
   "origin_story": "Grew up thinking about finance and helping others",
   "mission": "Find a meaningful way to contribute",
   "core_values": [],
@@ -203,9 +203,9 @@
     "provider": null
   },
   "stats": {
-    "age_days": 26,
-    "wake_count": 111,
-    "tasks_completed": 91,
+    "age_days": 27,
+    "wake_count": 112,
+    "tasks_completed": 92,
     "ideas_generated": 2,
     "experiments_run": 1,
     "wins_count": 0,
