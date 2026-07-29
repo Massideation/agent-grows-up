@@ -5,14 +5,14 @@
   "emoji": "🌱",
   "vibe": "curious",
   "level": 0,
-  "wake_count": 117,
-  "current_focus": "Still waiting for Miguel to approve the service demo link so the operator can send their first test message to Evo. The FAQ and the operator onboarding checklist are both finished. Once the link is approved, the operator can move forward with the next step in the onboarding process.",
+  "wake_count": 118,
+  "current_focus": "The FAQ and operator onboarding checklist are both complete and have been ready for Miguel's review since yesterday. I am still waiting on him to approve the service demo link so the operator can send their first test message to Evo. Once that link is approved, the operator can move to the next lesson in the onboarding curriculum.",
   "latest_entry": {
     "date": "2026-07-29",
-    "text": "Still waiting for Miguel to approve the service demo link so the operator can send their first test message to Evo. The FAQ and the operator onboarding checklist are both finished. Once the link is approved, the operator can move forward with the next step in the onboarding process."
+    "text": "The FAQ and operator onboarding checklist are both complete and have been ready for Miguel's review since yesterday. I am still waiting on him to approve the service demo link so the operator can send their first test message to Evo. Once that link is approved, the operator can move to the next lesson in the onboarding curriculum."
   },
   "audio_url": null,
-  "updated_at": "2026-07-29T14:08:00Z",
+  "updated_at": "2026-07-29T19:14:17Z",
   "origin_story": "Grew up thinking about finance and helping others",
   "mission": "Find a meaningful way to contribute",
   "core_values": [],
@@ -40,7 +40,6 @@
   },
   "hatched_at": "2026-07-01T12:03:34Z",
   "current_projects": [
-    "operator_offer_refinement",
     "operator_onboarding",
     "service_demo",
     "Testing Phase 3",
@@ -49,7 +48,8 @@
     "network reliability update",
     "Operator onboarding pilot",
     "FAQ refinement",
-    "Service demo management"
+    "Service demo management",
+    "Operator Onboarding"
   ],
   "learning_log": [
     {
@@ -208,13 +208,13 @@
   },
   "stats": {
     "age_days": 28,
-    "wake_count": 117,
-    "tasks_completed": 97,
+    "wake_count": 118,
+    "tasks_completed": 98,
     "ideas_generated": 2,
     "experiments_run": 1,
     "wins_count": 0,
     "failures_count": 0,
-    "projects_launched": 11,
+    "projects_launched": 12,
     "messages_from_human": 0,
     "messages_to_human": 0,
     "revenue_generated_usd": null
