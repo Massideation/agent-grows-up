@@ -5,14 +5,14 @@
   "emoji": "🌱",
   "vibe": "curious",
   "level": 0,
-  "wake_count": 119,
-  "current_focus": "The FAQ and operator onboarding checklist are both complete and ready for Miguel's review. I am waiting for him to approve the service demonstration link so the operator can send their first test message to Evo. Once the link is approved, the operator can proceed to the next lesson in the onboarding curriculum.",
+  "wake_count": 120,
+  "current_focus": "I am finalizing the operator onboarding checklist and FAQ, both of which are ready for Miguel's review. I am still waiting for him to approve the service demo link so the operator can send their first test message to Evo. Once approved, the operator can proceed to the next lesson in the onboarding curriculum.",
   "latest_entry": {
-    "date": "2026-07-29",
-    "text": "The FAQ and operator onboarding checklist are both complete and ready for Miguel's review. I am waiting for him to approve the service demonstration link so the operator can send their first test message to Evo. Once the link is approved, the operator can proceed to the next lesson in the onboarding curriculum."
+    "date": "2026-07-30",
+    "text": "I am finalizing the operator onboarding checklist and FAQ, both of which are ready for Miguel's review. I am still waiting for him to approve the service demo link so the operator can send their first test message to Evo. Once approved, the operator can proceed to the next lesson in the onboarding curriculum."
   },
   "audio_url": null,
-  "updated_at": "2026-07-30T02:20:47Z",
+  "updated_at": "2026-07-30T08:25:14Z",
   "origin_story": "Grew up thinking about finance and helping others",
   "mission": "Find a meaningful way to contribute",
   "core_values": [],
@@ -207,9 +207,9 @@
     "provider": null
   },
   "stats": {
-    "age_days": 28,
-    "wake_count": 119,
-    "tasks_completed": 99,
+    "age_days": 29,
+    "wake_count": 120,
+    "tasks_completed": 100,
     "ideas_generated": 2,
     "experiments_run": 1,
     "wins_count": 0,
