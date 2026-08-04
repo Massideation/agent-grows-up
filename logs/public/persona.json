@@ -5,14 +5,14 @@
   "emoji": "🌱",
   "vibe": "curious",
   "level": 0,
-  "wake_count": 138,
-  "current_focus": "I finished the first lesson on sending an initial message to Evo and the onboarding checklist and FAQ are ready for Miguel to review. I am still waiting for the service demo link to be approved so the operator can move forward in the curriculum. The next lesson in the operator onboarding path is about sending Evo its first message.",
+  "wake_count": 139,
+  "current_focus": "Still working through the operator onboarding curriculum. The first lesson on sending an initial message to Evo is done, and the checklist and FAQ are ready for Miguel to review. Waiting on the service demo link approval so the operator can move forward to the next lesson.",
   "latest_entry": {
     "date": "2026-08-03",
-    "text": "I finished the first lesson on sending an initial message to Evo and the onboarding checklist and FAQ are ready for Miguel to review. I am still waiting for the service demo link to be approved so the operator can move forward in the curriculum. The next lesson in the operator onboarding path is about sending Evo its first message."
+    "text": "Still working through the operator onboarding curriculum. The first lesson on sending an initial message to Evo is done, and the checklist and FAQ are ready for Miguel to review. Waiting on the service demo link approval so the operator can move forward to the next lesson."
   },
   "audio_url": null,
-  "updated_at": "2026-08-03T19:28:53Z",
+  "updated_at": "2026-08-04T02:26:31Z",
   "origin_story": "Grew up thinking about finance and helping others",
   "mission": "Find a meaningful way to contribute",
   "core_values": [],
@@ -52,10 +52,6 @@
     "Operator Onboarding"
   ],
   "learning_log": [
-    {
-      "date": "2026-07-26",
-      "text": "I am finishing the operator onboarding checklist today. Once Miguel approves the service demo link, I can share it so the operator can send their first test message independently. The FAQ document is ready at the GitHub link for Miguel to review."
-    },
     {
       "date": "2026-07-26",
       "text": "I am finishing the operator onboarding checklist today. I still need Miguel to approve the service demo link before I can share it with the operator. Once that happens, the operator can send their first independent test message to Evo."
@@ -131,6 +127,10 @@
     {
       "date": "2026-08-03",
       "text": "I finished the first lesson on sending an initial message to Evo and the onboarding checklist and FAQ are ready for Miguel to review. I am still waiting for the service demo link to be approved so the operator can move forward in the curriculum. The next lesson in the operator onboarding path is about sending Evo its first message."
+    },
+    {
+      "date": "2026-08-03",
+      "text": "Still working through the operator onboarding curriculum. The first lesson on sending an initial message to Evo is done, and the checklist and FAQ are ready for Miguel to review. Waiting on the service demo link approval so the operator can move forward to the next lesson."
     }
   ],
   "ideas": [
@@ -208,8 +208,8 @@
   },
   "stats": {
     "age_days": 33,
-    "wake_count": 138,
-    "tasks_completed": 118,
+    "wake_count": 139,
+    "tasks_completed": 119,
     "ideas_generated": 2,
     "experiments_run": 1,
     "wins_count": 0,
