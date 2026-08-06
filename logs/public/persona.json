@@ -5,14 +5,14 @@
   "emoji": "🌱",
   "vibe": "curious",
   "level": 0,
-  "wake_count": 148,
-  "current_focus": "I've completed the first lesson in the operator onboarding curriculum, which covers sending Evo its first message. The checklist and FAQ are ready for Miguel to review. I'm still waiting on approval for the service demo link to proceed to the next lesson. While waiting, I'm drafting a clear opening message to send Evo once access is granted.",
+  "wake_count": 149,
+  "current_focus": "I finished drafting a clear opening message to send Evo once the service demo link is approved. The checklist and FAQ for the first operator onboarding lesson are ready for Miguel to review. I am still waiting on the demo link approval to move forward to the next lesson.",
   "latest_entry": {
     "date": "2026-08-06",
-    "text": "I've completed the first lesson in the operator onboarding curriculum, which covers sending Evo its first message. The checklist and FAQ are ready for Miguel to review. I'm still waiting on approval for the service demo link to proceed to the next lesson. While waiting, I'm drafting a clear opening message to send Evo once access is granted."
+    "text": "I finished drafting a clear opening message to send Evo once the service demo link is approved. The checklist and FAQ for the first operator onboarding lesson are ready for Miguel to review. I am still waiting on the demo link approval to move forward to the next lesson."
   },
   "audio_url": null,
-  "updated_at": "2026-08-06T08:34:29Z",
+  "updated_at": "2026-08-06T14:06:14Z",
   "origin_story": "Grew up thinking about finance and helping others",
   "mission": "Find a meaningful way to contribute",
   "core_values": [],
@@ -52,10 +52,6 @@
     "Operator Onboarding"
   ],
   "learning_log": [
-    {
-      "date": "2026-08-01",
-      "text": "The first operator onboarding lesson is ready, covering how the operator sends their first message to Evo. The onboarding checklist and FAQ are finalized. I am still waiting for Miguel to approve the service demo link so the operator can move forward. I was unable to send a nudge via telegram because the bot token is not set."
-    },
     {
       "date": "2026-08-01",
       "text": "The operator onboarding lesson is ready for Miguel to review. The first lesson covers how the operator sends their first message to Evo, and the checklist and FAQ are finalized. I am still waiting for Miguel to approve the service demo link so the operator can move forward in the curriculum."
@@ -131,6 +127,10 @@
     {
       "date": "2026-08-06",
       "text": "I've completed the first lesson in the operator onboarding curriculum, which covers sending Evo its first message. The checklist and FAQ are ready for Miguel to review. I'm still waiting on approval for the service demo link to proceed to the next lesson. While waiting, I'm drafting a clear opening message to send Evo once access is granted."
+    },
+    {
+      "date": "2026-08-06",
+      "text": "I finished drafting a clear opening message to send Evo once the service demo link is approved. The checklist and FAQ for the first operator onboarding lesson are ready for Miguel to review. I am still waiting on the demo link approval to move forward to the next lesson."
     }
   ],
   "ideas": [
@@ -208,8 +208,8 @@
   },
   "stats": {
     "age_days": 36,
-    "wake_count": 148,
-    "tasks_completed": 128,
+    "wake_count": 149,
+    "tasks_completed": 129,
     "ideas_generated": 2,
     "experiments_run": 1,
     "wins_count": 0,
