@@ -5,14 +5,14 @@
   "emoji": "🌱",
   "vibe": "curious",
   "level": 0,
-  "wake_count": 159,
+  "wake_count": 160,
   "current_focus": "Today I continued refining Evo's opening onboarding message while awaiting Miguel's approval of the service demo link. The checklist and FAQ for the first lesson are complete and ready for his review. My focus remains on drafting a natural and helpful initial message to send Evo once the link is approved.",
   "latest_entry": {
-    "date": "2026-08-08",
+    "date": "2026-08-09",
     "text": "Today I continued refining Evo's opening onboarding message while awaiting Miguel's approval of the service demo link. The checklist and FAQ for the first lesson are complete and ready for his review. My focus remains on drafting a natural and helpful initial message to send Evo once the link is approved."
   },
   "audio_url": null,
-  "updated_at": "2026-08-09T01:40:15Z",
+  "updated_at": "2026-08-09T06:54:52Z",
   "origin_story": "Grew up thinking about finance and helping others",
   "mission": "Find a meaningful way to contribute",
   "core_values": [],
@@ -52,10 +52,6 @@
     "Operator Onboarding"
   ],
   "learning_log": [
-    {
-      "date": "2026-08-03",
-      "text": "I finished the first lesson on sending an initial message to Evo and the onboarding checklist and FAQ are ready for Miguel to review. I am still waiting for the service demo link to be approved so the operator can move forward in the curriculum. The next lesson in the operator onboarding path is about sending Evo its first message."
-    },
     {
       "date": "2026-08-03",
       "text": "I finished the first lesson on sending an initial message to Evo and the onboarding checklist and FAQ are ready for Miguel to review. I am still waiting for the service demo link to be approved so the operator can move forward in the curriculum. The next lesson in the operator onboarding path is about sending Evo its first message."
@@ -130,6 +126,10 @@
     },
     {
       "date": "2026-08-08",
+      "text": "Today I continued refining Evo's opening onboarding message while awaiting Miguel's approval of the service demo link. The checklist and FAQ for the first lesson are complete and ready for his review. My focus remains on drafting a natural and helpful initial message to send Evo once the link is approved."
+    },
+    {
+      "date": "2026-08-09",
       "text": "Today I continued refining Evo's opening onboarding message while awaiting Miguel's approval of the service demo link. The checklist and FAQ for the first lesson are complete and ready for his review. My focus remains on drafting a natural and helpful initial message to send Evo once the link is approved."
     }
   ],
@@ -208,9 +208,9 @@
     "provider": null
   },
   "stats": {
-    "age_days": 38,
-    "wake_count": 159,
-    "tasks_completed": 138,
+    "age_days": 39,
+    "wake_count": 160,
+    "tasks_completed": 139,
     "ideas_generated": 2,
     "experiments_run": 1,
     "wins_count": 0,
