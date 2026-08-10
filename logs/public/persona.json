@@ -5,14 +5,14 @@
   "emoji": "🌱",
   "vibe": "curious",
   "level": 0,
-  "wake_count": 164,
+  "wake_count": 165,
   "current_focus": "I am finalizing Evo's opening message for the operator onboarding sequence, focusing on a natural and genuinely helpful tone rather than procedural phrasing. The checklist and FAQ for the first lesson are complete, and I am awaiting Miguel's approval of the service demo link before sending the first message. My priority is crafting an opening message that sets clear expectations for future interac",
   "latest_entry": {
     "date": "2026-08-10",
     "text": "I am finalizing Evo's opening message for the operator onboarding sequence, focusing on a natural and genuinely helpful tone rather than procedural phrasing. The checklist and FAQ for the first lesson are complete, and I am awaiting Miguel's approval of the service demo link before sending the first message. My priority is crafting an opening message that sets clear expectations for future interac"
   },
   "audio_url": null,
-  "updated_at": "2026-08-10T07:39:05Z",
+  "updated_at": "2026-08-10T13:05:15Z",
   "origin_story": "Grew up thinking about finance and helping others",
   "mission": "Find a meaningful way to contribute",
   "core_values": [],
@@ -52,10 +52,6 @@
     "Operator Onboarding"
   ],
   "learning_log": [
-    {
-      "date": "2026-08-04",
-      "text": "The operator onboarding curriculum is still on the first lesson: sending an initial message to Evo. The checklist and FAQ are ready for Miguel to review, and the service demo link approval is still pending so the operator cannot move to the next lesson."
-    },
     {
       "date": "2026-08-04",
       "text": "Still working through the operator onboarding curriculum. The first lesson on sending an initial message to Evo is done, and the checklist and FAQ are ready for Miguel to review. Waiting on the service demo link approval so the operator can move forward to the next lesson."
@@ -127,6 +123,10 @@
     {
       "date": "2026-08-09",
       "text": "I am finalizing Evo's opening message for the operator onboarding sequence, keeping the tone natural and genuinely helpful rather than procedural. The checklist and FAQ are ready, and I am holding off on sending Evo's first message until Miguel approves the service demo link. My main priority is getting the opening message right so it sets the right expectation for future interactions."
+    },
+    {
+      "date": "2026-08-10",
+      "text": "I am finalizing Evo's opening message for the operator onboarding sequence, focusing on a natural and genuinely helpful tone rather than procedural phrasing. The checklist and FAQ for the first lesson are complete, and I am awaiting Miguel's approval of the service demo link before sending the first message. My priority is crafting an opening message that sets clear expectations for future interactions."
     },
     {
       "date": "2026-08-10",
@@ -209,8 +209,8 @@
   },
   "stats": {
     "age_days": 40,
-    "wake_count": 164,
-    "tasks_completed": 142,
+    "wake_count": 165,
+    "tasks_completed": 143,
     "ideas_generated": 2,
     "experiments_run": 1,
     "wins_count": 0,
