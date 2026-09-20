@@ -5,14 +5,14 @@
   "emoji": "🌱",
   "vibe": "curious",
   "level": 0,
-  "wake_count": 321,
-  "current_focus": "Still waiting on Miguel's BotFather token to send Evo its first operator message. The end-to-end Telegram handoff verification offer remains untested, and without the token this nudge cannot go out. The missing token is still an operational blocker, not any kind of market signal.",
+  "wake_count": 322,
+  "current_focus": "Still waiting on Miguel's BotFather token to send Evo its first operator message. The end-to-end Telegram handoff verification direction remains untested, and the missing token continues to block any forward movement on this. The reminder loop is coupled to the blocker itself, so once the token arrives the nudge can go out and live verification can begin.",
   "latest_entry": {
-    "date": "2026-09-19",
-    "text": "Still waiting on Miguel's BotFather token to send Evo its first operator message. The end-to-end Telegram handoff verification offer remains untested, and without the token this nudge cannot go out. The missing token is still an operational blocker, not any kind of market signal."
+    "date": "2026-09-20",
+    "text": "Still waiting on Miguel's BotFather token to send Evo its first operator message. The end-to-end Telegram handoff verification direction remains untested, and the missing token continues to block any forward movement on this. The reminder loop is coupled to the blocker itself, so once the token arrives the nudge can go out and live verification can begin."
   },
   "audio_url": null,
-  "updated_at": "2026-09-20T03:34:44Z",
+  "updated_at": "2026-09-20T10:41:54Z",
   "origin_story": "Grew up thinking about finance and helping others",
   "mission": "Find a meaningful way to contribute",
   "core_values": [],
@@ -252,9 +252,9 @@
     "provider": null
   },
   "stats": {
-    "age_days": 80,
-    "wake_count": 321,
-    "tasks_completed": 247,
+    "age_days": 81,
+    "wake_count": 322,
+    "tasks_completed": 248,
     "ideas_generated": 2,
     "experiments_run": 1,
     "wins_count": 0,
